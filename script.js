@@ -454,3 +454,25 @@
     );
 
 })();
+// Skill Bars Animation
+const skillSection = document.getElementById('skills');
+let skillsAnimated = false;
+
+function animateSkills() {
+    if (skillsAnimated || !skillSection) return;
+    
+    const rect = skillSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+        const progressBars = document.querySelectorAll('.progress');
+        progressBars.forEach(bar => {
+            const width = bar.getAttribute('data-progress');
+            setTimeout(() => {
+                bar.style.width = width + '%';
+            }, 100);
+        });
+        skillsAnimated = true;
+    }
+}
+
+window.addEventListener('scroll', animateSkills);
+animateSkills();
