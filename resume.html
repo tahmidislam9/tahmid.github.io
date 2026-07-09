@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download professional resume of Tahmid Islam Tamim - Digital Marketing Expert">
+    <title>Resume - Tahmid Islam Tamim</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .resume-page {
+            padding: 120px 0 80px;
+            min-height: 100vh;
+        }
+        
+        .resume-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .resume-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .download-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-primary);
+            padding: 4rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .resume-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--text-light);
+        }
+        
+        .resume-section:last-child {
+            border-bottom: none;
+        }
+        
+        .resume-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .resume-item {
+            margin-bottom: 2rem;
+        }
+        
+        .resume-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resume-item h4 {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .resume-item p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .skills-grid-resume {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .skill-item-resume {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-item-resume i {
+            color: var(--primary-color);
+        }
+        
+        @media print {
+            .navbar, .download-btns, .footer, .theme-toggle {
+                display: none;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-bracket">&lt;</span>
+                    Tahmid<span class="logo-dot">.</span>Islam
+                    <span class="logo-bracket">/&gt;</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a></li>
+                <li><a href="index.html#about" class="nav-link">
+                    <i class="fas fa-user"></i> About
+                </a></li>
+                <li><a href="blog.html" class="nav-link">
+                    <i class="fas fa-blog"></i> Blog
+                </a></li>
+                <li><a href="index.html#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resume Content -->
+    <section class="resume-page">
+        <div class="container">
+            <div class="resume-header">
+                <h1>My <span style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Resume</span></h1>
+                <p>Download or Print My Professional CV</p>
+                
+                <div class="download-btns">
+                    <button onclick="window.print()" class="btn btn-primary">
+                        <i class="fas fa-print"></i> Print Resume
+                    </button>
+                    <a href="assets/resume/Tahmid_Islam_Resume.pdf" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                    <a href="index.html#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="resume-container">
+                <!-- Personal Info -->
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">TAHMID ISLAM TAMIM</h1>
+                    <p style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1rem;">Digital Marketing Expert & Web Developer</p>
+                    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; color: var(--text-secondary);">
+                        <span><i class="fas fa-envelope"></i> tahmid.islam.tamim.09@g0a53.c60</span>
+                        <span><i class="fas fa-phone"></i> +880 182 658 5589</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Chattogram, Bangladesh</span>
+                    </div>
+                </div>
+
+                <!-- Professional Summary -->
+                <div class="resume-section">
+                    <h2><i class="fas fa-user"></i> Professional Summary</h2>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        Highly motivated Digital Marketing Expert and aspiring medical professional with proven expertise in 
+                        content creation, SEO optimization, and social media management. Successfully completed SSC with 
+                        a perfect 5.00 GPA and multiple professional certifications. Passionate about leveraging technology 
+                        to create impactful digital solutions while pursuing a future career in cardiology.
+                    </p>
+                </div>
+
+                <!-- Education -->
+                <div class="resume-section">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    
+                    <div class="resume-item">
+                        <h3>Secondary School Certificate (SSC)</h3>
+                        <h4>CMP School & College, Chattogram | 2026</h4>
+                        <p><strong>Result:</strong> 5.00 GPA (Perfect Score)</p>
+                        <p><strong>Board:</strong> Chattogram Education Board</p>
+                        <p>Achieved top academic performance with excellence in all subjects. Active participant in 
+                        extracurricular activities and computer club.</p>
+                    </div>
+                    
+                    <div class="resume-item">
+                        <h3>Computer Application Certificate</h3>
+                        <h4>Bangladesh Computer Council (BCC) | 2025</h4>
+                        <p>Specialized training in MS Office Suite, smart office management, and digital workplace tools.</p>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="resume-section">
+                    <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+                    
+                    <div class="resume-item">
+                        <h3>Freelance Digital Marketer</h3>
+                        <h4>Self-Employed | 2025 - Present</h4>
+                        <ul style="margin-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>Managed 15+ successful digital marketing campaigns with average 200% engagement increase</li>
+                            <li>Developed content strategies for local businesses resulting in significant online growth</li>
+                            <li>Implemented SEO optimization techniques improving search rankings</li>
+                            <li>Created and managed social media content across multiple platforms</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resume-item">
+                        <h3>Content Creator & Social Media Manager</h3>
+                        <h4>Various Projects | 2024 - 2025</h4>
+                        <ul style="margin-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+                            <li>Wrote 50+ SEO-optimized blog articles and web content</li>
+                            <li>Created 100+ engaging social media posts and graphics</li>
+                            <li>Managed content calendars and scheduling for multiple clients</li>
+                            <li>Grew social media following by 300% through strategic content</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="resume-section">
+                    <h2><i class="fas fa-code"></i> Skills & Expertise</h2>
+                    
+                    <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Technical Skills</h3>
+                    <div class="skills-grid-resume">
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Digital Marketing (85%)</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>SEO Optimization (75%)</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Content Management (90%)</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>MS Office Suite (95%)</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>HTML/CSS (80%)</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>JavaScript (70%)</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Graphic Design (75%)</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Social Media Marketing (85%)</span>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin: 2rem 0 1rem; color: var(--primary-color);">Soft Skills</h3>
+                    <div class="skills-grid-resume">
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Communication</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Team Collaboration</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Problem Solving</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Time Management</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Creativity</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="resume-section">
+                    <h2><i class="fas fa-certificate"></i> Certifications</h2>
+                    <div class="resume-item">
+                        <h3>Computer Application for Smart Office Management</h3>
+                        <h4>Bangladesh Computer Council (BCC)</h4>
+                    </div>
+                    <div class="resume-item">
+                        <h3>Digital Marketing Course</h3>
+                        <h4>Self-Paced Online Learning</h4>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="resume-section">
+                    <h2><i class="fas fa-language"></i> Languages</h2>
+                    <div class="skills-grid-resume">
+                        <div class="skill-item-resume">
+                            <i class="fas fa-globe"></i>
+                            <span><strong>Bengali:</strong> Native</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-globe"></i>
+                            <span><strong>English:</strong> Fluent</span>
+                        </div>
+                        <div class="skill-item-resume">
+                            <i class="fas fa-globe"></i>
+                            <span><strong>Japanese:</strong> Basic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interests -->
+                <div class="resume-section" style="border-bottom: none;">
+                    <h2><i class="fas fa-heart"></i> Interests & Hobbies</h2>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        Playing Cricket • Exploring New Technologies • Watching Thriller Movies • 
+                        Taking on Complex Challenges • Reading Medical Literature • 
+                        Digital Innovation • Content Creation
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tahmid Islam Tamim. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

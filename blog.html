@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the latest articles on digital marketing, web development, and technology by Tahmid Islam Tamim">
+    <title>Blog - Tahmid Islam Tamim</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Blog Specific Styles */
+        .blog-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+            text-align: center;
+        }
+        
+        .blog-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+        
+        .blog-container {
+            padding: 80px 0;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background: var(--bg-primary);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .blog-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+        
+        .blog-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 0.5rem 1rem;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .blog-content {
+            padding: 2rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .blog-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+        
+        .blog-excerpt {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: gap 0.3s ease;
+        }
+        
+        .read-more:hover {
+            gap: 1rem;
+        }
+        
+        .blog-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar-widget {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 2rem;
+        }
+        
+        .widget-title {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .search-box {
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--text-light);
+            border-radius: var(--radius-md);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 0.8rem 1.5rem;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: var(--radius-md);
+            color: white;
+            cursor: pointer;
+        }
+        
+        .category-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .category-list a {
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+        
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+        
+        .recent-post {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--text-light);
+        }
+        
+        .recent-post img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+        }
+        
+        .recent-post-content h5 {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .recent-post-content span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tag {
+            padding: 0.5rem 1rem;
+            background: var(--bg-primary);
+            border: 2px solid var(--text-light);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-bracket">&lt;</span>
+                    Tahmid<span class="logo-dot">.</span>Islam
+                    <span class="logo-bracket">/&gt;</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a></li>
+                <li><a href="index.html#about" class="nav-link">
+                    <i class="fas fa-user"></i> About
+                </a></li>
+                <li><a href="index.html#services" class="nav-link">
+                    <i class="fas fa-briefcase"></i> Services
+                </a></li>
+                <li><a href="index.html#projects" class="nav-link">
+                    <i class="fas fa-project-diagram"></i> Projects
+                </a></li>
+                <li><a href="blog.html" class="nav-link active">
+                    <i class="fas fa-blog"></i> Blog
+                </a></li>
+                <li><a href="index.html#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="resume.html" class="btn-resume">
+                    <i class="fas fa-file-download"></i> Resume
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>My <span style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Blog</span></h1>
+            <p>Insights on Digital Marketing, Web Development & Technology</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-container">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+                
+                <!-- Blog Posts -->
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Digital Marketing">
+                            <span class="blog-category">Digital Marketing</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Jan 15, 2026</span>
+                                <span><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h2 class="blog-title">10 Digital Marketing Strategies That Actually Work in 2026</h2>
+                            <p class="blog-excerpt">
+                                Discover the most effective digital marketing strategies that are driving results in 2026. 
+                                From AI-powered campaigns to personalized content...
+                            </p>
+                            <a href="#" class="read-more">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Web Development">
+                            <span class="blog-category">Web Development</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Jan 10, 2026</span>
+                                <span><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h2 class="blog-title">Building Lightning-Fast Websites: A Complete Guide</h2>
+                            <p class="blog-excerpt">
+                                Learn how to optimize your website for blazing fast performance. Cover everything from 
+                                code optimization to CDN implementation...
+                            </p>
+                            <a href="#" class="read-more">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=600" alt="SEO">
+                            <span class="blog-category">SEO</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Jan 5, 2026</span>
+                                <span><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h2 class="blog-title">SEO Best Practices: Rank Higher on Google</h2>
+                            <p class="blog-excerpt">
+                                Master the art of SEO with these proven techniques. Learn keyword research, on-page 
+                                optimization, and link building strategies...
+                            </p>
+                            <a href="#" class="read-more">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 4 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600" alt="Social Media">
+                            <span class="blog-category">Social Media</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Dec 28, 2025</span>
+                                <span><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
+                            <h2 class="blog-title">Social Media Growth Hacks for 2026</h2>
+                            <p class="blog-excerpt">
+                                Grow your social media presence with these proven tactics. From content strategy to 
+                                engagement techniques that work...
+                            </p>
+                            <a href="#" class="read-more">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 5 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600" alt="Design">
+                            <span class="blog-category">Design</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Dec 20, 2025</span>
+                                <span><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h2 class="blog-title">UI/UX Design Trends You Can't Ignore</h2>
+                            <p class="blog-excerpt">
+                                Stay ahead of the curve with the latest UI/UX design trends. From minimalism to 
+                                immersive experiences...
+                            </p>
+                            <a href="#" class="read-more">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 6 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600" alt="Content">
+                            <span class="blog-category">Content Writing</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar"></i> Dec 15, 2025</span>
+                                <span><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h2 class="blog-title">How to Write Content That Converts</h2>
+                            <p class="blog-excerpt">
+                                Master copywriting techniques that turn readers into customers. Learn the psychology 
+                                behind persuasive content...
+                            </p>
+                            <a href="#" class="read-more">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Search</h3>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search articles...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">Digital Marketing</a> <span>(12)</span></li>
+                            <li><a href="#">Web Development</a> <span>(8)</span></li>
+                            <li><a href="#">SEO</a> <span>(6)</span></li>
+                            <li><a href="#">Social Media</a> <span>(10)</span></li>
+                            <li><a href="#">Design</a> <span>(5)</span></li>
+                            <li><a href="#">Content Writing</a> <span>(7)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Posts Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Recent Posts</h3>
+                        <div>
+                            <div class="recent-post">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100" alt="Post">
+                                <div class="recent-post-content">
+                                    <h5>Digital Marketing Strategies</h5>
+                                    <span><i class="fas fa-calendar"></i> Jan 15, 2026</span>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=100" alt="Post">
+                                <div class="recent-post-content">
+                                    <h5>Building Fast Websites</h5>
+                                    <span><i class="fas fa-calendar"></i> Jan 10, 2026</span>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=100" alt="Post">
+                                <div class="recent-post-content">
+                                    <h5>SEO Best Practices</h5>
+                                    <span><i class="fas fa-calendar"></i> Jan 5, 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Popular Tags</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">Marketing</a>
+                            <a href="#" class="tag">SEO</a>
+                            <a href="#" class="tag">Web Dev</a>
+                            <a href="#" class="tag">Design</a>
+                            <a href="#" class="tag">Content</a>
+                            <a href="#" class="tag">Social Media</a>
+                            <a href="#" class="tag">Analytics</a>
+                            <a href="#" class="tag">Branding</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>
+                        Tahmid<span class="logo-dot">.</span>Islam
+                        <span class="logo-bracket">/&gt;</span>
+                    </h3>
+                    <p>Digital Marketing Expert & Aspiring Medical Professional</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/tahmid_islam__tamim"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:tahmid.islam.tamim.09@g0a53.c60"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tahmid Islam Tamim. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
