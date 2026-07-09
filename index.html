@@ -7,107 +7,186 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
     
-    <!-- Dark Mode Toggle -->
+    <!-- Theme Toggle -->
     <div class="theme-toggle" id="themeToggle">
         <i class="fas fa-moon"></i>
     </div>
 
+    <!-- Scroll Top -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
             <div class="logo">Tahmid<span>.</span>Islam</div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
+            <div class="nav-actions">
+                <a href="resume.html" class="btn-resume">
+                    <i class="fas fa-file-download"></i> Resume
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <p class="greeting">👋 Hello, I'm</p>
-                    <h1>Tahmid Islam Tamim</h1>
-                    <h2 class="typing">I'm a <span class="typed-text"></span></h2>
-                    <p class="description">Digital Marketing Expert & Computer Enthusiast from Chattogram, Bangladesh</p>
+                <div class="hero-text" data-aos="fade-right">
+                    <p class="greeting"><span class="wave">👋</span> This Is </p>
+                    <h1 class="glitch" data-text="Tahmid Islam Tamim">Tahmid Islam Tamim</h1>
+                    <div class="typing-container">
+                        <span class="typing-text">I'm a </span>
+                        <span class="typed-text"></span>
+                        <span class="cursor">&nbsp;</span>
+                    </div>
+                    <p class="description">
+                        Digital Marketing Expert & Computer Enthusiast from Chattogram, Bangladesh.
+                        Creating innovative digital solutions with passion and dedication.
+                    </p>
                     <div class="hero-stats">
-                        <div class="stat"><h3>5.00</h3><p>GPA</p></div>
-                        <div class="stat"><h3>15+</h3><p>Projects</p></div>
-                        <div class="stat"><h3>3+</h3><p>Certificates</p></div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="5">0</h3>
+                            <p>GPA Score</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="15">0</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="3">0</h3>
+                            <p>Certificates</p>
+                        </div>
                     </div>
                     <div class="hero-btns">
-                        <a href="#contact" class="btn btn-primary">Hire Me</a>
-                        <a href="#projects" class="btn btn-secondary">View Work</a>
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Hire Me
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-eye"></i> View Work
+                        </a>
+                        <a href="Tahmid_Islam_Resumee.pdf.pdf" download class="btn btn-outline">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/tahmid_islam__tamim"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/tahmidislam"><i class="fab fa-github"></i></a>
-                        <a href="mailto:tahmid.islam.tamim.09@g0a53.c60"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+8801826585589"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.instagram.com/tahmid_islam__tamim" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/tahmidislam" class="social-icon github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:tahmid.islam.tamim.09@g0a53.c60" class="social-icon email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+8801826585589" class="social-icon phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="hero-img">
+                <div class="hero-img" data-aos="fade-left">
                     <div class="img-box">
+                        <div class="img-border"></div>
                         <img src="profile.jpg.jpg" alt="Tahmid Islam">
+                        <div class="floating-badge badge-1">
+                            <i class="fas fa-code"></i>
+                            <span>Developer</span>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Marketer</span>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fas fa-brain"></i>
+                            <span>Innovator</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"><span></span><span></span><span></span></a>
         </div>
     </section>
 
     <!-- About Section (Card Design) -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About <span>Me</span></h2>
-            <div class="about-card">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get To Know</span>
+                <h2 class="section-title">About <span>Me</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-card" data-aos="fade-up">
                 <div class="about-img">
                     <img src="profile.jpg.jpg" alt="About Tahmid">
+                    <div class="about-experience">
+                        <h3>1+</h3>
+                        <p>Years Experience</p>
+                    </div>
                 </div>
                 <div class="about-content">
-                    <h3>Tahmid Islam Tamim</h3>
+                    <h3>I'm <span>Tahmid Islam Tamim</span></h3>
                     <p class="intro">Passionate about digital innovation and medical sciences</p>
                     <div class="about-info">
                         <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div><span>Name:</span><p>Tahmid Islam Tamim</p></div>
+                        </div>
+                        <div class="info-item">
                             <i class="fas fa-calendar"></i>
-                            <span><strong>Born:</strong> December 15, 2009</span>
+                            <div><span>Born:</span><p>December 15, 2009</p></div>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span><strong>Location:</strong> Chattogram, Bangladesh</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span><strong>Education:</strong> SSC (5.00 GPA)</span>
+                            <div><span>Location:</span><p>Chattogram, Bangladesh</p></div>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
-                            <span><strong>Email:</strong> tahmid.islam.tamim.09@g0a53.c60</span>
+                            <div><span>Email:</span><p>tahmid.islam.tamim.09@g0a53.c60</p></div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div><span>Phone:</span><p>+880 182 658 5589</p></div>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-language"></i>
-                            <span><strong>Languages:</strong> Bengali, English, Japanese</span>
+                            <div><span>Languages:</span><p>Bengali, English, Japanese</p></div>
                         </div>
                     </div>
                     <p class="about-text">
-                        I completed SSC in 2026 with perfect 5.00 GPA. I specialize in Digital Marketing, 
-                        Content Management, and Computer Applications. My future goal is to become a 
-                        Doctor specializing in Cardiology.
+                        I completed SSC in 2026 with perfect 5.00 GPA from CMP School & College.
+                        I specialize in Digital Marketing, Content Management, and Computer Applications.
+                        My future goal is to become a Doctor specializing in Cardiology.
                     </p>
                     <div class="about-btns">
-                        <a href="Tahmid_Islam_Resumee.pdf.pdf" download class="btn btn-primary">Download CV</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        <a href="Tahmid_Islam_Resumee.pdf.pdf" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Contact Me
+                        </a>
                     </div>
                 </div>
             </div>
@@ -117,43 +196,83 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What I Know</span>
+                <h2 class="section-title">My <span>Skills</span></h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="skill-categories" data-aos="fade-up">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="category-btn" data-category="marketing">
+                    <i class="fas fa-chart-line"></i> Marketing
+                </button>
+                <button class="category-btn" data-category="technical">
+                    <i class="fas fa-code"></i> Technical
+                </button>
+                <button class="category-btn" data-category="design">
+                    <i class="fas fa-palette"></i> Design
+                </button>
+            </div>
+
             <div class="skills-grid">
-                <div class="skill-card">
+                <div class="skill-card" data-category="marketing" data-aos="zoom-in">
                     <i class="fas fa-bullhorn"></i>
                     <h3>Digital Marketing</h3>
-                    <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
-                    <span>85%</span>
+                    <div class="progress-bar"><div class="progress" data-progress="85"></div></div>
+                    <span class="progress-text">85%</span>
+                    <p>Social media campaigns, ad management</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-category="marketing" data-aos="zoom-in">
                     <i class="fas fa-search"></i>
                     <h3>SEO</h3>
-                    <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
-                    <span>75%</span>
+                    <div class="progress-bar"><div class="progress" data-progress="75"></div></div>
+                    <span class="progress-text">75%</span>
+                    <p>On-page SEO, keyword research</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-category="marketing" data-aos="zoom-in">
                     <i class="fas fa-edit"></i>
                     <h3>Content Management</h3>
-                    <div class="progress-bar"><div class="progress" style="width:90%"></div></div>
-                    <span>90%</span>
+                    <div class="progress-bar"><div class="progress" data-progress="90"></div></div>
+                    <span class="progress-text">90%</span>
+                    <p>Content strategy, creation</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-category="technical" data-aos="zoom-in">
                     <i class="fab fa-html5"></i>
                     <h3>HTML/CSS</h3>
-                    <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
-                    <span>80%</span>
+                    <div class="progress-bar"><div class="progress" data-progress="80"></div></div>
+                    <span class="progress-text">80%</span>
+                    <p>Responsive web design</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-category="technical" data-aos="zoom-in">
                     <i class="fab fa-js"></i>
                     <h3>JavaScript</h3>
-                    <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
-                    <span>70%</span>
+                    <div class="progress-bar"><div class="progress" data-progress="70"></div></div>
+                    <span class="progress-text">70%</span>
+                    <p>Interactive applications</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-category="technical" data-aos="zoom-in">
                     <i class="fas fa-file-excel"></i>
                     <h3>MS Office</h3>
-                    <div class="progress-bar"><div class="progress" style="width:95%"></div></div>
-                    <span>95%</span>
+                    <div class="progress-bar"><div class="progress" data-progress="95"></div></div>
+                    <span class="progress-text">95%</span>
+                    <p>Word, Excel, PowerPoint</p>
+                </div>
+                <div class="skill-card" data-category="design" data-aos="zoom-in">
+                    <i class="fas fa-palette"></i>
+                    <h3>Graphic Design</h3>
+                    <div class="progress-bar"><div class="progress" data-progress="75"></div></div>
+                    <span class="progress-text">75%</span>
+                    <p>Visual content, branding</p>
+                </div>
+                <div class="skill-card" data-category="design" data-aos="zoom-in">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>UI/UX Design</h3>
+                    <div class="progress-bar"><div class="progress" data-progress="70"></div></div>
+                    <span class="progress-text">70%</span>
+                    <p>User interface design</p>
                 </div>
             </div>
         </div>
@@ -162,37 +281,78 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">My <span>Services</span></h2>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What I Offer</span>
+                <h2 class="section-title">My <span>Services</span></h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-aos="flip-left">
                     <i class="fas fa-chart-line"></i>
                     <h3>Digital Marketing</h3>
                     <p>Social media management, ad campaigns, analytics</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Social Media Marketing</li>
+                        <li><i class="fas fa-check"></i> Ad Campaign Management</li>
+                        <li><i class="fas fa-check"></i> Performance Analytics</li>
+                    </ul>
+                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card featured" data-aos="flip-left">
+                    <div class="featured-badge">Popular</div>
                     <i class="fas fa-laptop-code"></i>
                     <h3>Web Development</h3>
                     <p>Responsive websites, clean code, SEO optimized</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Custom Development</li>
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                    </ul>
+                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="flip-left">
                     <i class="fas fa-edit"></i>
                     <h3>Content Creation</h3>
                     <p>Blog writing, social media content, copywriting</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Blog Writing</li>
+                        <li><i class="fas fa-check"></i> Social Media Content</li>
+                        <li><i class="fas fa-check"></i> SEO Content</li>
+                    </ul>
+                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="flip-left">
                     <i class="fas fa-palette"></i>
                     <h3>Graphic Design</h3>
                     <p>Logos, banners, marketing materials</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Logo Design</li>
+                        <li><i class="fas fa-check"></i> Social Media Graphics</li>
+                        <li><i class="fas fa-check"></i> Brand Identity</li>
+                    </ul>
+                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="flip-left">
                     <i class="fas fa-search"></i>
                     <h3>SEO Services</h3>
                     <p>Keyword research, on-page SEO, audits</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Keyword Research</li>
+                        <li><i class="fas fa-check"></i> On-Page SEO</li>
+                        <li><i class="fas fa-check"></i> SEO Audits</li>
+                    </ul>
+                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="flip-left">
                     <i class="fas fa-tasks"></i>
                     <h3>Project Management</h3>
                     <p>Planning, execution, team coordination</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Project Planning</li>
+                        <li><i class="fas fa-check"></i> Task Management</li>
+                        <li><i class="fas fa-check"></i> Team Coordination</li>
+                    </ul>
+                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -201,32 +361,264 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">My <span>Projects</span></h2>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Featured <span>Projects</span></h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Project">
-                    <div class="project-info">
-                        <h3>Social Media Campaign</h3>
-                        <p>250% engagement increase</p>
-                        <span>Facebook Ads</span>
+                <div class="project-item" data-category="marketing" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Social Media Campaign</h3>
+                                <p>250% engagement increase</p>
+                                <div class="project-tags">
+                                    <span>Facebook Ads</span>
+                                    <span>Instagram</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600" alt="Project">
-                    <div class="project-info">
-                        <h3>E-commerce Platform</h3>
-                        <p>Online store with payment</p>
-                        <span>Web Development</span>
+                <div class="project-item" data-category="web" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600" alt="Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>E-commerce Platform</h3>
+                                <p>Online store with payment</p>
+                                <div class="project-tags">
+                                    <span>HTML/CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600" alt="Project">
-                    <div class="project-info">
-                        <h3>Brand Identity</h3>
-                        <p>Complete brand package</p>
-                        <span>Graphic Design</span>
+                <div class="project-item" data-category="design" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600" alt="Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Brand Identity</h3>
+                                <p>Complete brand package</p>
+                                <div class="project-tags">
+                                    <span>Logo Design</span>
+                                    <span>Branding</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="project-item" data-category="marketing" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=600" alt="Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Content Strategy</h3>
+                                <p>300% traffic increase</p>
+                                <div class="project-tags">
+                                    <span>SEO Content</span>
+                                    <span>Blog</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="web" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Portfolio Website</h3>
+                                <p>Responsive with animations</p>
+                                <div class="project-tags">
+                                    <span>Responsive</span>
+                                    <span>Animation</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="design" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600" alt="Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Social Media Graphics</h3>
+                                <p>Engaging visual content</p>
+                                <div class="project-tags">
+                                    <span>Graphic Design</span>
+                                    <span>Social Media</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-search-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-title">Education & <span>Experience</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-column" data-aos="fade-right">
+                    <h3 class="timeline-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date"><i class="fas fa-calendar"></i> 2026</span>
+                            <h4>Secondary School Certificate (SSC)</h4>
+                            <h5>CMP School & College</h5>
+                            <p><strong>Result:</strong> 5.00 GPA (Perfect Score)</p>
+                            <div class="timeline-badge"><i class="fas fa-star"></i> Top Performance</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date"><i class="fas fa-calendar"></i> 2025</span>
+                            <h4>Computer Application Certificate</h4>
+                            <h5>Bangladesh Computer Council (BCC)</h5>
+                            <p>Smart Office Management and Computer Applications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-column" data-aos="fade-left">
+                    <h3 class="timeline-title"><i class="fas fa-briefcase"></i> Experience</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date"><i class="fas fa-calendar"></i> 2025 - Present</span>
+                            <h4>Freelance Digital Marketer</h4>
+                            <h5>Self-Employed</h5>
+                            <ul>
+                                <li>Managed 15+ successful ad campaigns</li>
+                                <li>Increased client engagement by avg 200%</li>
+                                <li>SEO optimization for multiple websites</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date"><i class="fas fa-calendar"></i> 2024 - 2025</span>
+                            <h4>Content Creator</h4>
+                            <h5>Various Platforms</h5>
+                            <ul>
+                                <li>Wrote 50+ blog articles</li>
+                                <li>Created 100+ social media posts</li>
+                                <li>Managed content calendars</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Client Feedback</span>
+                <h2 class="section-title">What <span>Clients Say</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "Tahmid's digital marketing expertise helped our business grow exponentially.
+                        His strategies increased our social media engagement by over 200%!"
+                    </p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                        <div><h4>Rafiq Ahmed</h4><p>Business Owner, Chattogram</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "Professional, dedicated, and extremely talented. Tahmid delivered a beautiful website
+                        that perfectly captured our brand essence. Highly recommended!"
+                    </p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                        <div><h4>Sadia Rahman</h4><p>Entrepreneur</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "Working with Tahmid was a pleasure. His content creation skills and SEO knowledge
+                        helped us rank higher on Google and attract more customers."
+                    </p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client">
+                        <div><h4>Kamal Hossain</h4><p>Marketing Director</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-navigation">
+                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots"></div>
+                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
@@ -234,35 +626,76 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contact <span>Me</span></h2>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact <span>Me</span></h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right">
                     <h3>Let's Work Together!</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Wasa, HighLevel Road, Chattogram</p>
+                    <p>I'm always interested in hearing about new projects and opportunities.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text"><h4>Location</h4><p>Wasa, HighLevel Road, Chattogram</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text"><h4>Email</h4><p>tahmid.islam.tamim.09@g0a53.c60</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-text"><h4>Phone</h4><p>+880 182 658 5589</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="contact-text"><h4>Social Media</h4><p>@tahmid_islam__tamim</p></div>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>tahmid.islam.tamim.09@g0a53.c60</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+880 182 658 5589</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-instagram"></i>
-                        <p>@tahmid_islam__tamim</p>
+                    <div class="contact-social">
+                        <a href="https://www.instagram.com/tahmid_islam__tamim"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/tahmidislam"><i class="fab fa-github"></i></a>
+                        <a href="mailto:tahmid.islam.tamim.09@g0a53.c60"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea name="message" rows="5" placeholder="Message" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                    <div class="form-status" id="formStatus"></div>
-                </form>
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" id="name" required>
+                                <label for="name">Your Name</label>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" required>
+                                <label for="email">Your Email</label>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" name="phone" id="phone">
+                                <label for="phone">Phone Number</label>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" id="subject" required>
+                                <label for="subject">Subject</label>
+                                <i class="fas fa-tag"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span><i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -270,16 +703,51 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Tahmid Islam Tamim. All Rights Reserved.</p>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/tahmid_islam__tamim"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/tahmidislam"><i class="fab fa-github"></i></a>
-                <a href="mailto:tahmid.islam.tamim.09@g0a53.c60"><i class="fas fa-envelope"></i></a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">Tahmid<span>.</span>Islam</h3>
+                    <p>Digital Marketing Expert & Aspiring Medical Professional</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/tahmid_islam__tamim"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/tahmidislam"><i class="fab fa-github"></i></a>
+                        <a href="mailto:tahmid.islam.tamim.09@g0a53.c60"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Digital Marketing</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Content Creation</a></li>
+                        <li><a href="#services">SEO Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Chattogram, Bangladesh</span></li>
+                        <li><i class="fas fa-phone"></i><span>+880 182 658 5589</span></li>
+                        <li><i class="fas fa-envelope"></i><span>tahmid.islam.tamim.09@g0a53.c60</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tahmid Islam Tamim. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
